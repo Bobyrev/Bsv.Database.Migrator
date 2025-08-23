@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bsv.Database.Migrator", "Bsv.Database.Migrator\Bsv.Database.Migrator.csproj", "{75C3E0C9-0702-4C14-98DC-6FB51052FC21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75C3E0C9-0702-4C14-98DC-6FB51052FC21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C3E0C9-0702-4C14-98DC-6FB51052FC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C3E0C9-0702-4C14-98DC-6FB51052FC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C3E0C9-0702-4C14-98DC-6FB51052FC21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ECB4BEC2-F439-46E6-AC20-0C1573A2BAD5}
+	EndGlobalSection
+EndGlobal
