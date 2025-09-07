@@ -13,7 +13,9 @@ internal class BsvMigrator(
 
         var databaseType = Enum.Parse<DatabaseType>(configuration.DatabaseType);
         var databaseMigrator = databaseMigratorFactory.Get(databaseType);
-        await databaseMigrator.InitMigrationTableAsync(cancellation);
+        var connectionString = configuration.ConnectionString;
+
+        await databaseMigrator.InitMigrationTableAsync(connectionString, cancellation);
 
         var sqlFiles = Directory
             .EnumerateFiles(configuration.MigrationFolder, "*.sql")
@@ -28,7 +30,7 @@ internal class BsvMigrator(
                 if (string.IsNullOrEmpty(sqlQuery))
                     throw new EmptySqlQueryException($"Not found sql query in {sqlFile}");
 
-                await databaseMigrator.ExecuteMigrationAsync(sqlQuery, cancellation);
+                await databaseMigrator.ExecuteMigrationAsync(connectionString, sqlQuery, cancellation);
             }
             else 
             {

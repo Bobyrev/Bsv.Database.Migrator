@@ -2,7 +2,7 @@
 
 internal interface IDatabaseMigrator
 {
-    Task ExecuteMigrationAsync(string sqlQuery, CancellationToken cancellation);
+    Task ExecuteMigrationAsync(string connectionString, string sqlQuery, CancellationToken cancellation);
 
-    Task InitMigrationTableAsync(CancellationToken cancellation);
+    Task InitMigrationTableAsync(string connectionString, CancellationToken cancellation);
 }
